@@ -5,13 +5,13 @@ function getOSinfo() {
   var type = os.type();
   switch (type) {
     case 'Darwin':
-    type = 'OSX';
-    break;
+      type = 'OSX';
+      break;
     case 'Windows_NT':
-    type = 'Windows';
-    break;
+      type = 'Windows';
+      break;
     default:
-    type = type;
+      type = type;
   }
   var release = os.release;
   var cpu = os.cpus()[0].model;
