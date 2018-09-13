@@ -1,3 +1,5 @@
+var osInfo = require('../modules/osInfo');
+
 process.stdin.setEncoding('utf-8');
 
 process.stdin.on('readable', function() {
@@ -15,6 +17,9 @@ process.stdin.on('readable', function() {
       console.log('User language:', lng);
       console.log('Used Node.js version:', nodeVersion);
       process.exit();
+      break;
+    case '/getOSinfo':
+      osInfo.print();
       break;
     default:
       process.stderr.write('Wrong command');
